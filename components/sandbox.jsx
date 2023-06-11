@@ -11,32 +11,28 @@ const Sandbox = ({ height=50,lang="java",initialCode="", keywords }) => {
     }
 
     function verifyCode() {
-        // Split code into individual tokens
-        const tokens = code.split(/\b/);
-
-        let currentIndex = 0;
-        let tokenIndex = 0;
-
-        while (tokenIndex < tokens.length && currentIndex < keywords.length) {
-            const token = tokens[tokenIndex].trim();
-            const keyword = keywords[currentIndex];
-
-            if (token === keyword) {
-                currentIndex++;
+        let temp = code;
+       // ckeck if all keywords are present in code
+         let missingKeywords = [];
+            keywords.forEach(keyword => {
+                if (!temp.includes(keyword)) {
+                    missingKeywords.push(keyword);
+                }
+                else {
+                    let index = temp.indexOf(keyword);
+                    temp = temp.substring(index, temp.length);
+                    temp = temp.replace(keyword, "");
+                }
+            }
+            );
+            if (missingKeywords.length > 0) {
+                setOutput("You are missing: " + missingKeywords.join(", "));
+            }
+            else {
+                setOutput("Congratulations! Your code is correct!");
             }
 
-            tokenIndex++;
-        }
-
-        if (currentIndex === keywords.length) {
-            setOutput('Code verification result: Passed');
-        } else {
-            setOutput('Code verification result: Failed');
-        }
     }
-
-
-
 
     return (
         <div>

@@ -1,4 +1,6 @@
 {
     "00introduction": "Introduction",
-    "01helloworld":"HelloWorld"
+    "01helloworld":"HelloWorld",
+    "02variables": "Variables",
+    "03datatypes": "Data Types"
 }

@@ -1,7 +1,7 @@
 {
-  "name": "nextra-docs-template",
+  "name": "java-made-simpler",
   "version": "0.0.1",
-  "description": "Nextra docs template",
+  "description": "Java Made Simpler",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shuding/nextra-docs-template.git"
+    "url": "git+https://github.com/SujalChoudhari/nextra-docs-template.git"
   },
-  "author": "Sujal Choudhari <g@shud.in>",
+  "author": "Sujal Choudhari <sjlchoudhari21@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shuding/nextra-docs-template/issues"
+    "url": "https://github.com/SujalChoudhari/JavaMadeSimpler/issues"
   },
-  "homepage": "https://github.com/shuding/nextra-docs-template#readme",
+  "homepage": "https://github.com/SujalChoudhari/JavaMadeSimpler#readme",
   "dependencies": {
     "@monaco-editor/react": "^4.5.1",
     "next": "^13.0.6",
