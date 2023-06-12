@@ -13,5 +13,6 @@
         "type": "page",
         "href": "/basics"
     },
-    "basics": "Learn Java Basics"
+    "basics": "Basics",
+    "intermediate": "Intermediate"
 }

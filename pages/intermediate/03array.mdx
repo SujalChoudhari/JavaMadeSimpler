@@ -1,0 +1,107 @@
+import Sandbox from "components/sandbox";
+import MCQ from "components/mcq";
+import FillInTheBlanks from "components/fill-in-the-blanks";
+
+# Arrays in Java: A Ray of Sunshine! 🌞
+
+## 📚 **What are arrays?**
+
+Arrays are like a list of items in a movie or a game. Just like how a movie has a cast of characters or a game has a list of player scores, an array is a way to store multiple values of the same data type in a single variable.
+
+## 📝 **Declaring an array**
+
+To declare an array in Java, you need to specify the data type of the elements in the array, followed by square brackets `[]`, and then the name of the array. It's like casting the actors for a movie. You need to specify the type of actors you need, followed by the number of actors you need, and then the name of the cast. For example, to declare an array of integers called `myArray`, you would write:
+
+```java
+int[] myArray;
+```
+
+## 📝 **Initializing an array**
+
+To initialize an array, you need to specify the size of the array and then assign values to each element in the array. It's like giving each actor in the cast a role to play. For example, to create an array of 5 integers and assign values to each element, you would write:
+
+```java
+int[] myArray = {1, 2, 3, 4, 5};
+```
+
+### How to Make a array?
+
+<FillInTheBlanks
+  questionTop="The correct way to declare an array is:"
+  questionRight={` array = new int[5];`}
+  correctAnswer="int[]"
+/>
+
+## 📝 **Accessing elements in an array**
+
+You can access elements in an array by using the index of the element. The index starts at 0 for the first element in the array. It's like calling out the name of an actor in the cast. For example, to access the first element in the `myArray` array, you would write:
+
+```java
+int firstElement = myArray[0];
+```
+
+## 📝 **Changing elements in an array**
+
+You can change the value of an element in an array by assigning a new value to the element using its index. It's like changing the role of an actor in the cast. For example, to change the value of the second element in the `myArray` array to 10, you would write:
+
+```java
+myArray[1] = 10;
+```
+
+## 📝 **Iterating over an array**
+
+You can use a `for` loop to iterate over all the elements in an array. It's like going through the list of actors in the cast and calling out their names. For example, to print out all the elements in the `myArray` array, you would write:
+
+```java
+for (int i = 0; i < myArray.length; i {
+    System.out.println(myArray[i]);
+}
+```
+
+## Question: Arrays 🤔
+
+<MCQ
+  question="What can we do with arrays?"
+  options={[
+    "Store multiple values of the same data type in a single variable",
+    "Store multiple values of different data types in a single variable",
+    "Store a single value of the same data type in a single variable",
+    "Store a single value of different data types in a single variable",
+  ]}
+  correctAnswer="Store multiple values of the same data type in a single variable"
+/>
+
+<MCQ
+  question="Can we resize an array?"
+  options={["Yes", "No"]}
+  correctAnswer="No"
+/>
+
+## 🎬 **Example**
+
+Imagine you are creating a program to keep track of the cast of a movie. You can use an array to store the names of the actors. For example:
+
+```java
+String[] cast = {"Tom Hanks", "Tim Allen", "Joan Cusack", "Don Rickles", "Wallace Shawn"};
+```
+
+This creates an array called `cast` with 5 elements, each containing the name of an actor. You can access the third element in the array (which represents the name of the actress who played Jessie) like this:
+
+```java
+String jessie = cast[2];
+```
+
+You can also change the value of an element in the array if an actor drops out of the movie or a new actor is added:
+
+```java
+cast[4] = "John Ratzenberger";
+```
+
+# 🎥 **Exercise** : Arrays to rescue!
+
+Let's say you're creating a movie database program. Here's an exercise to help you practice using arrays in Java:
+
+1. Write a Java program that creates an array of 5 game titles and print out main character on a new line.
+2. Write a Java program that creates an array of 10 movie ratings and initializes each element to a random number between 1 and 10. Then, print out the average of all the ratings in the array.
+
+<Sandbox stdin={true} height={30} />

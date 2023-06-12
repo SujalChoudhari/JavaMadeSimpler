@@ -16,6 +16,7 @@ const FillInTheBlanks = ({ questionTop, questionLeft, questionRight, placeHolder
   };
 
   const verifyAnswer = () => {
+    console.log(userAnswer,correctAnswer);
     if (userAnswer === correctAnswer) {
       setVerificationResult('Perfect! 🎉');
     } else {

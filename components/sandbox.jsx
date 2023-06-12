@@ -10,12 +10,12 @@ const Sandbox = ({
     version = "15.0.2",
     stdin = false,
     initialCode = `public class Main {
-        public static void main(String[] args) {
-            // Write code here
-        }
-    }` }) => {
+    public static void main(String[] args) {
+        // Write code here
+    }
+}` }) => {
     const [code, setCode] = useState(initialCode);
-    const [output, setOutput] = useState('Click Verify to check your code');
+    const [output, setOutput] = useState('Outputs will be shown here');
     const [inputs, setInputs] = useState('');
 
 
@@ -60,7 +60,6 @@ const Sandbox = ({
 
     return (
         <div className={styles.sandbox + " " + windowStyle.window}>
-
             <WindowBar />
             <Editor
                 className={styles['editor-container']}
@@ -71,10 +70,8 @@ const Sandbox = ({
                 onChange={handleEditorChange}
             />
 
-            {/* If Stdin is true show the textArea */}
             {
                 stdin &&
-            
                 <div>
                     <div className={styles['input-label']}>
                         <label>Input</label>

@@ -1,0 +1,127 @@
+import Sandbox from "../../components/sandbox";
+import MCQ from "../../components/mcq";
+import FillInTheBlanks from "../../components/fill-in-the-blanks";
+
+# For Loops: Looooooop-dee-dooooo! 🎶
+
+👋 Hey there! Are you ready to learn about for loops in Java? 🤓
+
+For loops are a fundamental concept in programming, and they allow us to repeat a block of code a certain number of times. In Java, there are three types of for loops: the basic for loop, the enhanced for loop, and the for-each loop. Let's dive into each one!
+
+## Basic For Loop
+
+The basic for loop is the most common type of loop in Java. It has three parts: the initialization, the condition, and the increment/decrement. Here's an example:
+
+```java
+for (int i = 0; i < 10; i++) {
+  System.out.println("I am loop #" + i);
+}
+```
+
+In this example, we're initializing `i` to 0, setting the condition to run the loop as long as `i` is less than 10, and incrementing `i` by 1 after each iteration. The output of this code will be:
+
+```
+I am loop #0
+I am loop #1
+I am loop #2
+I am loop #3
+I am loop #4
+I am loop #5
+I am loop #6
+I am loop #7
+I am loop #8
+I am loop #9
+```
+
+### Before you forget
+
+<FillInTheBlanks
+    questionTop="Write a for loop that prints out the numbers 1 through 10."
+    questionLeft={`for(int i = 1; i <= `}
+    questionRight={`; i++){
+        System.out.println(i);
+    }`}
+    correctAnswer = "10"
+/>
+    
+
+
+## Excersise: Basic For Loop
+
+🎬 In the movie "Finding Nemo," the character Dory famously sings "Just keep swimming" to help her friend Marlin stay motivated. We can use the enhanced for loop to "just keep iterating" over arrays and collections!
+
+<Sandbox height={30} />
+
+🎬 Fun fact: Did you know that the movie "Groundhog Day" is all about a character who is stuck in a time loop? Just like our for loop, he keeps repeating the same day over and over again!
+
+## Enhanced For Loop
+
+The enhanced for loop, also known as the "for-each" loop, is used to iterate over arrays and collections. Here's an example:
+
+```java
+int[] numbers = {1, 2, 3, 4, 5};
+
+for (int number : numbers) {
+  System.out.println("The number is " + number);
+}
+```
+
+In this example, we're iterating over the `numbers` array and printing out each element. The output of this code will be:
+
+```
+The number is 1
+The number is 2
+The number is 3
+The number is 4
+The number is 5
+```
+
+## For-Each Loop
+
+The for-each loop is similar to the enhanced for loop, but it's used specifically for iterating over collections. Here's an example:
+
+```java
+List<String> names = new ArrayList<>();
+names.add("Alice");
+names.add("Bob");
+names.add("Charlie");
+
+for (String name : names) {
+  System.out.println("Hello, " + name + "!");
+}
+```
+
+In this example, we're iterating over the `names` collection and printing out each element. The output of this code will be:
+
+```
+Hello, Alice!
+Hello, Bob!
+Hello, Charlie!
+```
+
+<MCQ
+  question="To Print any Collection we CANNOT use what?"
+  correctAnswer="forEvery"
+  options={["forEvery", "for", "for-each", "enhanced for"]}
+/>
+
+## DIY: There is a Java in my Boot! 🤠
+
+In the movie "Toy Story," the character Woody famously says "There's a snake in my boot!" We can use the for-each loop to iterate over collections and make sure there are no snakes hiding in our data!
+Write code to print out each element of the `names` collection. The output should be:
+
+```
+There is a Snake in my Boot!
+There is a Toy in my Boot!
+There is a Story in my Boot!
+```
+
+<Sandbox
+  height={30}
+  initialCode={`public class Main{
+    public static void main(String[] args){
+        String[] names = {"Snake", "Toy", "Story"};
+        // Write your code here
+    }
+    }`}
+/>

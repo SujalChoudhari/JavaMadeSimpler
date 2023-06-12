@@ -1,6 +1,7 @@
 import MCQ from "../../components/mcq";
+import Sandbox from "../../components/sandbox.jsx";
 
-
+# Practice Questions
 ## Variables and Data Types
 
 <MCQ 
@@ -85,4 +86,19 @@ import MCQ from "../../components/mcq";
     question="How to get a character with Scanner?"
     correctAnswer="next().charAt(0)"
     options={["nextChar()", "nextLine()", "next().charAt(0)", "nextCharAt(0)"]}
+/>
+
+# Sandbox
+
+<Sandbox
+    height={50}
+    lang="java"
+    stdin={true}
+    initialCode={`import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // Write here    
+    }
+    }`}
 />

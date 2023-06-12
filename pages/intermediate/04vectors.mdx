@@ -1,0 +1,131 @@
+import Sandbox from "../../components/sandbox";
+import FillInTheBlanks from "../../components/fill-in-the-blanks";
+import MCQ from "../../components/mcq";
+
+# Vectors: Big Brother of Arrays
+
+<MCQ
+  question="Can we resize an Vector?"
+  correctAnswer="Yes"
+  options={["Yes", "No"]}
+/>
+
+## 📚 **What are vectors?**
+
+Vectors are like a superhero team in a movie. Just like how a superhero team has a group of heroes with different powers, a vector is a dynamic array that can store a group of elements of the same data type. It's like having a team of superheroes with different abilities to save the day!
+
+## 📝 **Declaring a vector**
+
+To declare a vector in Java, you need to import the `java.util.Vector` package and then create a new instance of the `Vector` class. It's like assembling your superhero team! For example, to create a vector of integers called `myVector`, you would write:
+
+```java
+import java.util.Vector;
+
+Vector<Integer> myVector = new Vector<Integer>();
+```
+
+## 📝 **Adding elements to a vector**
+
+You can add elements to a vector using the `add()` method. It's like recruiting new superheroes to your team! For example, to add the integer value 5 to the `myVector` vector, you would write:
+
+```java
+myVector.add(5);
+```
+
+<MCQ
+    question="Which of the following is the correct way to declare a vector?"
+    correctAnswer="Vector<Integer> myVector = new Vector<Integer>();"
+    options={[
+        "Vector myVector = new Vector();",
+        "Vector<Integer> myVector = new Vector<Integer>();",
+        "Vector<Integer> myVector = new Vector();",
+        "Vector myVector = new Vector<Integer>();"
+    ]}
+/>
+
+<MCQ
+    question="Can we add elements of different data types to a vector?"
+    correctAnswer="No"
+    options={["Yes", "No"]}
+/>
+
+## 📝 **Accessing elements in a vector**
+
+You can access elements in a vector by using the index of the element. The index starts at 0 for the first element in the vector. It's like calling out the name of a superhero in your team! For example, to access the first element in the `myVector` vector, you would write:
+
+```java
+int firstElement = myVector.get(0);
+```
+
+## 📝 **Changing elements in a vector**
+
+You change the value of an element in a vector by assigning a new value to the element using its index. It's like upgrading the powers of a superhero in your team! For example, to change the value of the second element in the `myVector` vector to 10, you would write:
+
+```java
+myVector.set(1, 10);
+```
+
+## 📝 **Iterating over a vector**
+
+You can use a `for` loop to iterate over all the elements in a vector. It's like going through the list of superheroes in your team and calling out their names and powers! For example, to print out all the elements in the `myVector` vector, you would write:
+
+```java
+for (int i = 0; i < myVector.size(); i++) {
+    System.out.println(myVector.get(i));
+}
+```
+
+## 🦸‍♂️ **Superhero Example**
+
+Imagine you're creating a superhero team to save the world. You can use a vector to store the powers of each superhero. For example:
+
+```java
+import java.util.Vector;
+
+Vector<String> superheroPowers = new Vector<String>();
+superheroPowers.add("Super strength");
+superheroPowers.add("Flight");
+superheroPowers.add("Invisibility");
+superheroPowers.add("Telekinesis");
+```
+
+This creates a vector called `superheroPowers` with 4 elements, each containing the power of a superhero. You can access the third element in the vector (which represents the power of the superhero with invisibility) like this:
+
+```java
+String invisibility = superheroPowers.get(2);
+```
+
+You can also change the value of an element in the vector if a superhero gains a new power or loses an old one:
+
+```java
+superheroPowers.set(1, "Super speed");
+```
+
+## 📝 **Use Cases**
+
+Vectors are useful when you need to store a group of elements of the same data type and you don't know the size of the group in advance. They are also useful when you need to add or remove elements from the group dynamically. Some use cases for vectors include:
+
+- Storing a list of items in a shopping cart on an e-commerce website
+- Storing a list of songs in a music player app
+- Storing a list of contacts in a phonebook app
+- Storing a list of messages in a chat app
+
+## 🎥 **Exercise**
+
+Let's say you're creating a movie database program. Here's an exercise to help you practice using vectors in Java:
+
+1. Write a Java program that creates a vector of 5 movie titles and prints out each title on a new line.
+2. Write a Java program that creates a vector of 10 movie ratings and initializes each element to a random number between 1 and 10. Then, print out the average of all the ratings in the vector.
+
+I hope this helps you understand vectors in Java better! Let me know if you have any questions or need further assistance.
+
+<Sandbox
+  height={30}
+  initialCode={`import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        // Write your code here
+    }
+}`}
+  stdin={true}
+/>
