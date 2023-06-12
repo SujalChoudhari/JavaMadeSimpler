@@ -8,7 +8,7 @@ const config: DocsThemeConfig = {
   },
   useNextSeoProps() {
     return {
-      titleTemplate: '%s – JMF'
+      titleTemplate: '%s – Java Made Simpler',
     }
   },
   themeSwitch: {
@@ -31,8 +31,8 @@ const config: DocsThemeConfig = {
   toc: {
     title: 'On this page',
   },
-  editLink: {
-    text: "Help us improve this page!"
+  editLink:{
+    text:""
   },
   feedback: {
     content: null,
@@ -40,9 +40,9 @@ const config: DocsThemeConfig = {
   footer: {
     text: (
       <footer>
-        <div>
-          <p>JavaMadeSimpler 😎</p>
-        </div>
+        <p>
+          Java Made Simpler is a project by <a href="https://github.com/SujalChoudhari">Sujal Choudhari</a>.
+        </p>
       </footer>
     )
   }

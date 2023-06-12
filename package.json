@@ -1,6 +1,6 @@
 {
   "name": "java-made-simpler",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Java Made Simpler",
   "scripts": {
     "dev": "next dev",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SujalChoudhari/nextra-docs-template.git"
+    "url": "git+https://github.com/SujalChoudhari/JavaMadeSimpler.git"
   },
   "author": "Sujal Choudhari <sjlchoudhari21@gmail.com>",
   "license": "MIT",
