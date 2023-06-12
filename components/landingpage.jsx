@@ -72,10 +72,10 @@ const Home = (props) => {
                     </div>
                     <div className={styles['video']}>
                         <video
-                            src="https://www.youtube.com/watch?v=dZtrJYI5i-U"
+                            src="/video.mp4"
                             poster="/video.svg"
                             loop
-                            controls
+                            // controls
                             autoPlay
                             muted
                             playsInline

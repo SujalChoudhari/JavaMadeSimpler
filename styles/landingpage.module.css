@@ -375,9 +375,10 @@
 }
 
 .video {
-    top: 0px;
+    padding: 20px;
+    top: 20vh;
     right: 0px;
-    width: 646px;
+    width: 50vw;
     display: flex;
     position: absolute;
     align-items: flex-start;
