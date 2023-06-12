@@ -8,7 +8,7 @@ const Sandbox = ({
     height = 50,
     lang = 'java',
     version = "15.0.2",
-    inputs = "",
+    stdin = false,
     initialCode = `public class Main {
         public static void main(String[] args) {
             // Write code here
@@ -16,6 +16,7 @@ const Sandbox = ({
     }` }) => {
     const [code, setCode] = useState(initialCode);
     const [output, setOutput] = useState('Click Verify to check your code');
+    const [inputs, setInputs] = useState('');
 
 
     function handleEditorChange(value, event) {
@@ -63,12 +64,30 @@ const Sandbox = ({
             <WindowBar />
             <Editor
                 className={styles['editor-container']}
-                height={(height + 10) + 'vh'}
+                height={(height) + 'vh'}
                 defaultLanguage={lang}
                 theme="vs-dark"
                 defaultValue={code}
                 onChange={handleEditorChange}
             />
+
+            {/* If Stdin is true show the textArea */}
+            {
+                stdin &&
+            
+                <div>
+                    <div className={styles['input-label']}>
+                        <label>Input</label>
+                    </div>
+                    <textarea
+                        className={styles['input-container']}
+                        placeholder="Enter input here"
+                        onChange={(e) => setInputs(e.target.value)}
+                        value={inputs}
+                        disabled={!stdin}
+                    />
+                </div>
+            }
 
             <div className={styles['verify-button']}>
                 <button onClick={verifyCode}>Verify</button>

@@ -19,6 +19,15 @@
     cursor: pointer;
 }
 
+.input-container {
+    margin-top: 16px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: 100%;
+    padding: 16px;
+    white-space: pre-wrap;
+}
+
 .output-container {
     margin-top: 16px;
     border: 1px solid #888;
