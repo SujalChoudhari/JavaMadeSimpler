@@ -1,4 +1,4 @@
-import InputSandbox from "../../components/input-sandbox";
+import Sandbox from "../../components/sandbox";
 import FillInTheBlanks from "../../components/fill-in-the-blanks";
 
 Ah, inputs in Java! 🎉 They are like the secret ingredients that allow your program to interact with the user and take in information. And guess what? The Scanner class comes to the rescue for handling inputs in Java! 🕵️‍♀️🔍
@@ -125,9 +125,10 @@ Create a String variable named `name` and assign it the user's name using the `n
 Call the `sc.nextLine()` method to read the user's name and store it in the `name` variable.
 Display the user's name back to them using the `System.out.println()` statement.
 
-<InputSandbox
+<Sandbox
   height={50}
   lang="java"
+  inputs = "Joe"
   initialCode={`import java.util.Scanner;
 class Main {
   public static void main(String[] args) {
@@ -138,16 +139,5 @@ class Main {
     System.out.println("Your name is: " +name);
 
   }
-}
-  `}
-  keywords={[
-    "import", "java", ".", "util", ".", "Scanner", ";",
-    "class", "Main", "{", "public", "static", "void", "main", "(", "String", "[]", "args", ")", "{",
-    "Scanner",  "=", "new", "Scanner", "(", "System", ".", "in", ")", ";",
-    "System", ".", "out", ".", "println", "(", "\"Enter name\"", ")", ";",
-    "String", "name", "=", ".", "nextLine", "(", ")", ";",
-    "System", ".", "out", ".", "println", "(", "name", ")", ";",
-  ]}
-  correctOutput="Your name is: [0]"
-  inputs={["Enter Name"]}
+}`}
 />

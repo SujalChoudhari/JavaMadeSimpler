@@ -4,9 +4,19 @@ import Editor from '@monaco-editor/react';
 import WindowBar from './window-bar';
 import styles from '../styles/sandbox.module.css';
 import windowStyle from '../styles/window.module.css';
-const Sandbox = ({ height = 50, lang = 'java', initialCode = '', keywords, correctOutput = 'Correct Code' }) => {
+const Sandbox = ({
+    height = 50,
+    lang = 'java',
+    version = "15.0.2",
+    inputs = "",
+    initialCode = `public class Main {
+        public static void main(String[] args) {
+            // Write code here
+        }
+    }` }) => {
     const [code, setCode] = useState(initialCode);
     const [output, setOutput] = useState('Click Verify to check your code');
+
 
     function handleEditorChange(value, event) {
         setCode(value);
@@ -14,25 +24,35 @@ const Sandbox = ({ height = 50, lang = 'java', initialCode = '', keywords, corre
     }
 
     function verifyCode() {
-        let temp = code;
-        // check if all keywords are present in code
-        let missingKeywords = [];
-        keywords.forEach((keyword) => {
-            if (!temp.includes(keyword)) {
-                missingKeywords.push(keyword);
-                
-                
-            } else {
-                let index = temp.indexOf(keyword);
-                temp = temp.substring(index, temp.length);
-                temp = temp.replace(keyword, '');
-            }
-        });
 
-        if (missingKeywords.length > 0) {
-                setOutput('You are missing: ' + missingKeywords.join(', '));
-        } else {
-            setOutput(correctOutput);
+        setOutput('Executing...');
+        try {
+            fetch('https://emkc.org/api/v2/piston/execute', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    language: lang,
+                    version: version,
+                    files: [
+                        {
+                            name: 'Main',
+                            content: code.toString()
+                        }
+                    ],
+                    args: [],
+                    stdin: inputs
+                })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    setOutput(data.run.output);
+                }
+                );
+
+        } catch (e) {
+            setOutput('Error: ' + e.message);
         }
 
     }
@@ -43,7 +63,7 @@ const Sandbox = ({ height = 50, lang = 'java', initialCode = '', keywords, corre
             <WindowBar />
             <Editor
                 className={styles['editor-container']}
-                height={height + 'vh'}
+                height={(height + 10) + 'vh'}
                 defaultLanguage={lang}
                 theme="vs-dark"
                 defaultValue={code}
