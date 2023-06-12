@@ -2,7 +2,7 @@
 
 Welcome to the amazing world of JavaMadeSimpler! 🚀 This project is all about making Java programming a breeze, and we're here to rock your coding journey with some serious fun! 😄
 
-Find Live Demo [here](https://java  -made-simpler.vercel.app/)
+Find Live Demo [here](https://java-made-simpler.vercel.app/)
 
 ## About Adventum Hackathon 🎉
 
