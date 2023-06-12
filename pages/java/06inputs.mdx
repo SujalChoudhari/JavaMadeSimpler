@@ -1,0 +1,153 @@
+import InputSandbox from "../../components/input-sandbox";
+import FillInTheBlanks from "../../components/fill-in-the-blanks";
+
+Ah, inputs in Java! 🎉 They are like the secret ingredients that allow your program to interact with the user and take in information. And guess what? The Scanner class comes to the rescue for handling inputs in Java! 🕵️‍♀️🔍
+
+The Scanner class, found in the `java.util` package, is like a handy tool that helps you get user input. It provides methods to read different types of input from the user, such as strings, numbers, and more! 📥🖊️
+
+To use the Scanner class, you need to follow a few steps. Let's break it down together! 😄
+
+Step 1: Import the Scanner class
+You need to import the Scanner class into your Java program before you can use it. You can do this by adding the following line at the beginning of your code:
+
+```java
+import java.util.Scanner;
+```
+
+Step 2: Create a Scanner object
+Next, you need to create an object of the Scanner class. This object will be your tool to read user input. Here's an example of how you can create a Scanner object:
+
+```java
+Scanner myObj = new Scanner(System.in);
+```
+
+In this example, `myObj` is the name of the Scanner object. You can choose any name you like!
+
+Step 3: Read user input
+Now comes the fun part! You can use the methods provided by the Scanner class to read different types of input from the user. Let's take a look at a few examples:
+
+- To read a string from the user, you can use the `nextLine()` method:
+
+  ```java
+  String userName = myObj.nextLine();
+  ```
+
+  This method reads a whole line of text entered by the user.
+
+- To read an integer from the user, you can use the `nextInt()` method:
+
+  ```java
+  int age = myObj.nextInt();
+  ```
+
+  This method reads an integer value entered by the user.
+
+- To read a floating-point number (like a decimal) from the user, you can use the `nextDouble()` method:
+
+  ```java
+  double salary = myObj.nextDouble();
+  ```
+
+  This method reads a double value entered by the user.
+
+Step 4: Use the input
+Once you have read the user's input, you can use it in your program as needed. You can perform calculations, display messages, or store the input in variables for later use. Let your imagination run wild! 🌈🚀
+
+Here's a complete example that demonstrates reading different types of input using the Scanner class:
+
+```java
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner myObj = new Scanner(System.in);
+
+    System.out.println("Enter name, age, and salary:");
+
+    String name = myObj.nextLine();
+    int age = myObj.nextInt();
+    double salary = myObj.nextDouble();
+
+    System.out.println("Name: " + name);
+    System.out.println("Age: " + age);
+    System.out.println("Salary: " + salary);
+  }
+}
+```
+
+In this example, we read the user's name as a string, age as an integer, and salary as a double. Then, we display the input back to the user. Voila! 🎩✨
+
+Remember, if the user enters the wrong type of input (for example, text instead of a number), Java will throw an exception or error message to let you know. You can handle such cases using exception handling techniques, but that's a topic for another day. 😉
+
+
+## Question: A Question a Day Keeps the Doubts Away! 🤔
+
+<FillInTheBlanks
+  questionTop="How will you take a Integer input from the user?"
+  questionLeft={`
+  import java.util.Scanner;
+  class Main {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter number");
+      int name = sc.`}
+  placeHolder="next...."
+  questionRight={`();
+      System.out.println("Your number is: " +name);
+    }
+  }
+  `}
+  correctAnswer="nextInt"
+  />
+
+### One more?
+<FillInTheBlanks
+  questionTop="How will you take the entire line as a String input from the user?"
+  questionLeft={`
+  import java.util.Scanner;
+  class Main {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter name");
+      String name = sc.`}
+  placeHolder="next...."
+  questionRight={`();
+      System.out.println("Your name is: " +name);
+    }
+  }
+  `}
+  correctAnswer="nextLine"
+  />
+
+## DIY: Try it yourself! 🎉
+
+Create a String variable named `name` and assign it the user's name using the `nextLine()` method.
+Call the `sc.nextLine()` method to read the user's name and store it in the `name` variable.
+Display the user's name back to them using the `System.out.println()` statement.
+
+<InputSandbox
+  height={30}
+  lang="java"
+  initialCode={`import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter name");
+    // Write here
+
+    System.out.println("Your name is: " +name);
+
+  }
+}
+  `}
+  keywords={[
+    "import", "java", ".", "util", ".", "Scanner", ";",
+    "class", "Main", "{", "public", "static", "void", "main", "(", "String", "[]", "args", ")", "{",
+    "Scanner",  "=", "new", "Scanner", "(", "System", ".", "in", ")", ";",
+    "System", ".", "out", ".", "println", "(", "\"Enter name\"", ")", ";",
+    "String", "name", "=", ".", "nextLine", "(", ")", ";",
+    "System", ".", "out", ".", "println", "(", "name", ")", ";",
+  ]}
+  correctOutput="Your name is: [0]"
+  inputs={["Enter Name"]}
+/>
