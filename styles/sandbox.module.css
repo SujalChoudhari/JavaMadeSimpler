@@ -1,0 +1,25 @@
+
+.editor-container {
+    height: 100%;
+}
+
+.verify-button {
+    margin-top: 16px;
+}
+
+.verify-button button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.output-container {
+    margin-top: 16px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    padding: 16px;
+    white-space: pre-wrap;
+}

@@ -1,0 +1,127 @@
+import FillInTheBlanks from "../../components/fill-in-the-blanks.jsx";
+
+# Operators: The Superheroes of Java Math! 🦸‍♀️🦸‍♂️
+In Java, operators are special symbols that are used to perform different operations on variables and values. They help us manipulate and work with data in our programs. There are various types of operators in Java, each serving a specific purpose. Let's explore them one by one, shall we? 🚀
+
+## **1. Arithmetic Operators**: 
+These operators are used to perform mathematical operations like addition, subtraction, multiplication, division, and more. They are like the superheroes of Java math! 🦸‍♀️🦸‍♂️
+
+For example, the `+` operator is used for addition, the `-` operator is used for subtraction, the `*` operator is used for multiplication, the `/` operator is used for division, and the `%` operator gives us the remainder of a division.
+
+Here's a fun example to help you understand:
+
+```java
+int num1 = 10 + 5;   // num1 is now 15 (10 + 5)
+int num2 = num1 - 3; // num2 is now 12 (15 - 3)
+int num3 = num1 * num2; // num3 is now 180 (15 * 12)
+int num4 = num3 / num2; // num4 is now 15 (180 / 12)
+int remainder = num3 % num2; // remainder is 0 (180 % 12)
+```
+See how these operators work together to create a math masterpiece? It's like a symphony of numbers! 🎶
+
+### Question: Arithmetic Operators 🤔
+
+<FillInTheBlanks
+  questionTop="What is the value of num1 after the following code is executed?"
+  questionLeft={`
+  int num1 = 10;
+  num1 = 5;
+  `}
+  correctAnswer="5"
+  questionRight={`;`}
+/>
+
+## **2. Assignment Operators**: 
+These operators are used to assign values to variables. They make sure that each variable gets the right value it deserves. 🎁
+
+For example, the `=` operator is used for simple assignment. But there are also compound assignment operators like `+=`, `-=`, `*=`, `/=`, and `%=` which combine arithmetic operations with assignment.
+
+Let me give you an example that will make you go "Aha!":
+
+```java
+int x = 5; // x is now 5
+x += 3;    // same as x = x + 3, so x becomes 8
+x -= 2;    // same as x = x - 2, now x is 6
+x *= 4;    // same as x = x * 4, x becomes 24
+x /= 6;    // same as x = x / 6, now x is 4
+x %= 3;    // same as x = x % 3, x becomes 1
+```
+
+See how these assignment operators make the process more efficient? It's like magic! 🎩✨
+
+### Question: Assignment Operators 🤔
+
+<FillInTheBlanks
+  questionTop="What is the value of x after the following code is executed?"
+  questionLeft={`
+  int x = 10;
+  x /= 5;
+  `}
+  correctAnswer="2"
+  questionRight={`;`}
+/>
+
+## **3. Comparison Operators**: 
+These operators are used to compare values and determine the relationship between them. They are like detectives, always looking for clues! 🔍🕵️‍♀️
+
+For example, the `==` operator checks if two values are equal, the `!=` operator checks if they are not equal, and there are also operators like `<`, `>`, `<=`, and `>=` for comparing values based on their magnitude.
+
+Let's solve a mystery with comparison operators:
+
+```java
+int num1 = 5;
+int num2 = 10;
+boolean isEqual = (num1 == num2); // false, as 5 is not equal to 10
+boolean isNotEqual = (num1 != num2); // true, as 5 is not equal to 10
+boolean isGreater = (num1 > num2); // false, as 5 is not greater than 10
+
+
+boolean isLessOrEqual = (num1 <= num2); // true, as 5 is less than or equal to 10
+```
+
+### Question: Comparison Operators 🤔
+
+<FillInTheBlanks
+  questionTop="What is the value of isEqual after the following code is executed?"
+  questionLeft={`
+  int num1 = 10;
+  int num2 = 10;
+  boolean isEqual = (num1 == num2);
+  `}
+  correctAnswer="true"
+  questionRight={`;`}
+/>
+
+## **4. Logical Operators**: 
+These operators are used to combine multiple conditions and perform logical operations. They are like the architects of decision-making in Java! 🏗️
+
+For example, the `&&` operator performs a logical AND operation, the `||` operator performs a logical OR operation, and the `!` operator negates a condition.
+
+Let's build some logic with these operators:
+
+```java
+boolean isSunny = true;
+boolean isWarm = false;
+boolean isGoodDay = isSunny && isWarm; // false, because both conditions need to be true
+
+boolean isRainy = true;
+boolean isWeekend = true;
+boolean isIndoorDay = isRainy || isWeekend; // true, because at least one condition is true
+
+boolean isNotSunny = !isSunny; // false, because !isSunny negates the value of isSunny (true)
+```
+
+### Question: Logical Operators 🤔
+
+<FillInTheBlanks
+  questionTop="What is the value of isGoodDay after the following code is executed?"
+  questionLeft={`
+  boolean isSunny = true;
+  boolean isWarm = false;
+  boolean isGoodDay = isSunny && isWarm;
+  `}
+  correctAnswer="false"
+  questionRight={`;`}
+/>
+
+These are just a few types of operators in Java, but there's even more to explore! We also have bitwise operators, unary operators, ternary operator, and more. But for now, let's enjoy the superhero math, detective comparisons, logical architects, and assignment wizards we've met so far! 🦸‍♀️🕵️‍♂️🏗️🎩

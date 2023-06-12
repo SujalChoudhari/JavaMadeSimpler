@@ -1,59 +1,68 @@
 import React, { useState } from 'react';
 import Editor from '@monaco-editor/react';
 
-const Sandbox = ({ height=50,lang="java",initialCode="", keywords }) => {
+import WindowBar from './window-bar';
+import styles from '../styles/sandbox.module.css';
+import windowStyle from '../styles/window.module.css';
+const Sandbox = ({ height = 50, lang = 'java', initialCode = '', keywords, correctOutput = 'Correct Code' }) => {
     const [code, setCode] = useState(initialCode);
-    const [output, setOutput] = useState("Click Verify to check your code");
+    const [output, setOutput] = useState('Click Verify to check your code');
 
     function handleEditorChange(value, event) {
         setCode(value);
-        setOutput("");
+        setOutput('');
     }
 
     function verifyCode() {
         let temp = code;
-       // ckeck if all keywords are present in code
-         let missingKeywords = [];
-            keywords.forEach(keyword => {
-                if (!temp.includes(keyword)) {
-                    missingKeywords.push(keyword);
-                }
-                else {
-                    let index = temp.indexOf(keyword);
-                    temp = temp.substring(index, temp.length);
-                    temp = temp.replace(keyword, "");
-                }
+        // check if all keywords are present in code
+        let missingKeywords = [];
+        keywords.forEach((keyword) => {
+            if (!temp.includes(keyword)) {
+                missingKeywords.push(keyword);
+                
+                
+            } else {
+                let index = temp.indexOf(keyword);
+                temp = temp.substring(index, temp.length);
+                temp = temp.replace(keyword, '');
             }
-            );
-            if (missingKeywords.length > 0) {
-                setOutput("You are missing: " + missingKeywords.join(", "));
+        });
+
+        if (missingKeywords.length > 0) {
+            if (missingKeywords.length > 5) {
+                setOutput('You are missing some keywords');
+            } else {
+                setOutput('You are missing: ' + missingKeywords.join(', '));
             }
-            else {
-                setOutput("Congratulations! Your code is correct!");
-            }
+        } else {
+            setOutput(correctOutput);
+        }
 
     }
 
     return (
-        <div>
+        <div className={styles.sandbox + " " + windowStyle.window}>
+
+            <WindowBar />
             <Editor
-                height={height + "vh"}
+                className={styles['editor-container']}
+                height={height + 'vh'}
                 defaultLanguage={lang}
-                theme='vs-dark'
+                theme="vs-dark"
                 defaultValue={code}
                 onChange={handleEditorChange}
             />
 
-            <div>
+            <div className={styles['verify-button']}>
                 <button onClick={verifyCode}>Verify</button>
             </div>
-            <div>
-                <pre>
-                    {output}
-                </pre>
+
+            <div className={styles['output-container']}>
+                <pre>{output}</pre>
             </div>
         </div>
     );
-}
+};
 
 export default Sandbox;

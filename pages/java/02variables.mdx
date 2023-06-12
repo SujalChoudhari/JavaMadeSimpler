@@ -1,4 +1,5 @@
 import Sandbox from "../../components/sandbox.jsx";
+import FillInTheBlanks from "../../components/fill-in-the-blanks.jsx";
 
 # Variables: Store and manipulate data in Java! 📦
 
@@ -6,7 +7,8 @@ Welcome, aspiring Java developer! Today, let's explore the wonderful world of va
 
 In Java, a variable is a named storage location used to store data that can be manipulated and accessed throughout a program. It's like a labeled box where you can put different things and retrieve them later.
 
-Let's dive into an example of how to declare and use variables in Java. 😄 Here's a code snippet:
+Let's dive into an example of how to declare and use variables in Java. 
+😄 Here's a code snippet:
 
 ```java
 class VariableExample {
@@ -24,6 +26,8 @@ class VariableExample {
 ```
 
 Don't worry if it looks a bit overwhelming right now. Let's break it down together. 🤝
+
+## Strings
 
 ```java
 String message;
@@ -43,9 +47,27 @@ System.out.println(message);
 
 Finally, we use the 'System.out.println()' statement to print the value of the 'message' variable to the screen.
 
+
+## Question
+
+<FillInTheBlanks
+  questionTop='To store "Java Made Simpler" in a variable named "message" we write ...'
+  questionLeft={`
+class VariableExample{
+  public static void main(String[] args){
+    `}
+  correctAnswer='String'
+  questionRight={` message = "Java Made Simpler";
+  }
+}`}
+/>
+
+
+
 ## DIY: Your Turn! 🎉
 
-Now it's time for you to practice with variables. Declare a variable named 'number' of type int and assign it a value of 42. Then, print the value of the 'number' variable to the screen.
+Now it's time for you to practice with variables. Declare a variable named 'number' of type `int` and assign it a value of 42. Then, print the value of the 'number' variable to the screen.
+
 
 <Sandbox
   height={20}

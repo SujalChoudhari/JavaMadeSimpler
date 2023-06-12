@@ -1,0 +1,48 @@
+/* styles/fill-in-the-blanks.module.css */
+
+.fillInTheBlanks {
+    margin-bottom: 20px;
+}
+
+.fillInTheBlanks p {
+    margin-bottom: 10px;
+}
+
+.fillInTheBlanks input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.fillInTheBlanks button {
+    margin-top: 16px;
+    padding: 8px 16px;
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.fillInTheBlanks p:last-child {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.fillInTheBlanks pre {
+    background-color: #191919;
+    color: #fff;
+    border: 1px solid #888;
+    border-radius: 4px;
+    padding: 16px;
+}
+
+.fillInTheBlanks .output-container {
+    margin-top: 16px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    padding: 16px;
+    white-space: pre-wrap;
+}

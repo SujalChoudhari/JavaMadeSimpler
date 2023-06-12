@@ -2,5 +2,6 @@
     "00introduction": "Introduction",
     "01helloworld":"HelloWorld",
     "02variables": "Variables",
-    "03datatypes": "Data Types"
+    "03datatypes": "Data Types",
+    "04operators": "Operators"
 }
