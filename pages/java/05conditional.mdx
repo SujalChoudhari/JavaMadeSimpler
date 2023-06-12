@@ -1,0 +1,150 @@
+import FillInTheBlanks from "../../components/fill-in-the-blanks.jsx";
+import Sandbox from "../../components/sandbox.jsx";
+
+## If Java is Fun, Learn More! 🤩
+
+Ah, conditions in Java! 🌧️ They are like the weather forecast for your code.
+Conditions help you make decisions based on certain situations.
+In Java, you can use conditions to check if something is true or false, just like in mathematics.
+
+Let's dive into some examples to understand conditions better! 😄
+
+Suppose we have two numbers, `a` and `b`. We can use different conditions to compare them:
+
+- Less than: `a < b`
+- Less than or equal to: `a <= b`
+- Greater than: `a > b`
+- Greater than or equal to: `a >= b`
+- Equal to: `a == b`
+- Not equal to: `a != b`
+
+These conditions are like the ingredients for our decision-making recipe! 🍰
+
+## If Statements 🚦
+
+Now, let's see how we can use conditions in Java using "if" statements. The "if" statement allows us to execute a block of code only if a specific condition is true. 🚦
+
+Here's the basic syntax of an "if" statement:
+
+```java
+if (condition) {
+    // Code to be executed if the condition is true
+}
+```
+
+## Question: If Statements 🤔
+
+<FillInTheBlanks
+  questionTop="What is the output of the following code?"
+  questionLeft={`
+  int x = 20;
+  int y = 18;
+  if (x > y) {
+    System.out.println("Hi");
+  }
+  else {
+    System.out.println("Bye");
+  }
+  // The output is:`}
+  correctAnswer="Hi"
+  questionRight=""
+/>
+
+When you run this code, it will print "20 is greater than 18" because the condition inside the "if" statement is true! 🎉
+
+You can also use variables in conditions. Let's say we have two variables, `x` and `y`, and we want to check if `x` is greater than `y`:
+
+```java
+int x = 20;
+int y = 18;
+if (x > y) {
+    System.out.println("x is greater than y");
+}
+```
+
+In this case, since `x` is indeed greater than `y`, it will print "x is greater than y". 📈
+
+But what if the condition inside the "if" statement is false? That's where the "else" statement comes to the rescue! It allows us to specify a block of code to be executed when the condition is false. 😎
+
+Here's an example:
+
+```java
+int time = 20;
+if (time < 18) {
+    System.out.println("Good day.");
+} else {
+    System.out.println("Good evening.");
+}
+```
+
+Since the value of `time` is 20, which is greater than 18, it will print "Good evening." 🌙
+
+But wait, there's more! You can also have multiple conditions using "else if" statements. It's like having different options for different scenarios. 🌈
+
+Here's an example that covers different times of the day:
+
+```java
+int time = 22;
+if (time < 10) {
+    System.out.println("Good morning.");
+} else if (time < 20) {
+    System.out.println("Good day.");
+} else {
+    System.out.println("Good evening.");
+}
+```
+
+In this case, since the value of `time` is 22, it doesn't satisfy the first two conditions, but it matches the last one, so it will print "Good evening." 🌃
+
+By using conditions, you can control the flow of your program and make it respond differently to different situations. It's like having a personal assistant for your code! 🤖💼
+
+If you want to explore more about conditions and see some cool examples, you can check out these resources:
+
+- [Java If ... Else - W3Schools](https://www.w3schools.com/java/java_conditions.asp)
+- [Java if Keyword - W3Schools](https://www.w3schools.com/java/ref_keyword_if.asp)
+- [Java If else - Javatpoint](https://www.javatpoint.com/java-if-else)
+
+## DIY: If Code is Cool, Try it Yourself! 🎉
+
+Create a variable named `mySalary` and assign it `900000`.
+Create a variable named `myFriendSalary` and assign it `800000`.
+If `mySalary` is greater than `myFriendSalary` print `Yay!` else print `Nay!`.
+
+<Sandbox
+  height={30}
+  initialCode={`
+double mySalary;
+double myFriendSalary;`}
+  keywords={[
+    "double",
+    "mySalary",
+    "=",
+    "900000",
+    ";",
+    "double",
+    "myFriendSalary",
+    "=",
+    "800000",
+    ";",
+    "if",
+    "(",
+    "Salary",
+    ">",
+    "Salary",
+    ")",
+    "System.out.println",
+    "(",
+    "Yay",
+    ")",
+    ";",
+    "else",
+    "System.out.println",
+    "(",
+    "Nay",
+    ")",
+    ";",
+  ]}
+  correctOutput={`Yay!`}
+/>
+
+Keep exploring and having fun with Java! 🎉👩‍💻👨‍💻

@@ -3,5 +3,6 @@
     "01helloworld":"HelloWorld",
     "02variables": "Variables",
     "03datatypes": "Data Types",
-    "04operators": "Operators"
+    "04operators": "Operators",
+    "05conditional": "Conditionals"
 }

@@ -1,4 +1,5 @@
 import FillInTheBlanks from "../../components/fill-in-the-blanks.jsx";
+import Sandbox from "../../components/sandbox.jsx";
 
 # Operators: The Superheroes of Java Math! 🦸‍♀️🦸‍♂️
 In Java, operators are special symbols that are used to perform different operations on variables and values. They help us manipulate and work with data in our programs. There are various types of operators in Java, each serving a specific purpose. Let's explore them one by one, shall we? 🚀
@@ -125,3 +126,21 @@ boolean isNotSunny = !isSunny; // false, because !isSunny negates the value of i
 />
 
 These are just a few types of operators in Java, but there's even more to explore! We also have bitwise operators, unary operators, ternary operator, and more. But for now, let's enjoy the superhero math, detective comparisons, logical architects, and assignment wizards we've met so far! 🦸‍♀️🕵️‍♂️🏗️🎩
+
+
+## DIY: You need Practice! 🎉
+
+First assign `10` to `num1` and `5` to `num2`.
+Subtract `num2` from `num1` and store the result in `num3`.
+Set isEquals to true if `num3` is equal to `num2`.
+Print the value of `isEquals` to the screen.
+
+<Sandbox
+  title="Operators"
+  height={30}
+  initialCode = {`
+int num1 = 10;
+int num2 = 5;`}
+  keywords={["int","num1","=","10",";","int","num2","=","5",";","int","num3","=","num1","-","num2",";","boolean","isEquals","=","num","==","num",";","System.out.println","(","isEquals",")",";"]}
+  correctOutput={`true`}
+/>

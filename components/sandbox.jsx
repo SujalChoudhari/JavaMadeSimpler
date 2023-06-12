@@ -30,11 +30,7 @@ const Sandbox = ({ height = 50, lang = 'java', initialCode = '', keywords, corre
         });
 
         if (missingKeywords.length > 0) {
-            if (missingKeywords.length > 5) {
-                setOutput('You are missing some keywords');
-            } else {
                 setOutput('You are missing: ' + missingKeywords.join(', '));
-            }
         } else {
             setOutput(correctOutput);
         }
