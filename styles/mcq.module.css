@@ -1,6 +1,6 @@
 .mcq {
-    background-color: #000;
-    color: #fff;
+    /* background-color: #000; */
+    /* color: #fff; */
     border: 1px solid #888;
     border-radius: 4px;
     padding: 16px;
@@ -10,9 +10,9 @@
     margin-top: 16px;
     padding: 8px 16px;
     width: 100%;
-    color: #fff;
-    background-color: #0d0a20;
-    border: solid 1px #00224b;
+    /* color: #fff; */
+    /* background-color: #17161b; */
+    border: solid 1px #454546;
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
@@ -24,6 +24,7 @@
 
 .option {
     display: flex;
+    border-width: 2px;
     align-items: center;
     margin-bottom: 8px;
 }
@@ -34,4 +35,18 @@
     border-radius: 4px;
     padding: 16px;
     white-space: pre-wrap;
+}
+
+.option.correct {
+    /* background-color: #006900; */
+    border-color: #00ff00;
+    border-width: 2px;
+    /* color: #fff; */
+}
+
+.option.incorrect {
+    border-width: 2px;
+    /* background-color: #690000; */
+    border-color: #ff0000;
+    /* color: #fff; */
 }

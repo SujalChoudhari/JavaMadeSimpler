@@ -20,6 +20,13 @@ const MCQ = ({ question, options, correctAnswer }) => {
     }
   };
 
+  const getOptionClass = (option) => {
+    if (selectedOption === option) {
+      return correctAnswer === option ? styles.correct : styles.incorrect;
+    }
+    return '';
+  };
+
   return (
     <div className={`${styles.mcq} ${windowStyle.window}`}>
       <WindowBar />
@@ -28,7 +35,7 @@ const MCQ = ({ question, options, correctAnswer }) => {
         {options.map((option, index) => (
           <button
             key={index}
-            className={`${styles.option} ${selectedOption === option ? styles.selected : ''}`}
+            className={`${styles.option} ${getOptionClass(option)}`}
             onClick={() => handleOptionClick(option)}
           >
             {option}
