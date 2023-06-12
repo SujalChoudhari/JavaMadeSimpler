@@ -1,4 +1,17 @@
 {
-    "index": "Introduction",
+    "index": {
+        "type":"page",
+        "title":"Home",
+        "theme":{
+            "toc":false,
+            "sidebar":false,
+            "layout":"full"
+        }
+    },
+    "Learn": {
+        "title": "Learn",
+        "type": "page",
+        "href": "/basics"
+    },
     "basics": "Learn Java Basics"
 }
